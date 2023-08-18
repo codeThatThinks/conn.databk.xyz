@@ -1,7 +1,7 @@
 name: conn.databk.xyz
 description: Automotive Connector Databook
 
-baseurl:
+baseurl: /
 parenturl: https://databk.xyz
 
 subdomain: conn

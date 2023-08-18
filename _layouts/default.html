@@ -83,6 +83,12 @@
 			max-width: 100%;
 		}
 
+		form {
+			background-color: #ddd;
+			padding: 1em;
+			border-radius: 0.25em;
+		}
+
 		form table {
 			border: 0;
 		}
@@ -110,7 +116,7 @@
 </head>
 <body>
 	<header>
-		<h1 id="site-name"><a id="subdomain" href="{{ site.baseurl }}/">{{ site.subdomain }}</a>.<a href="{{ site.parenturl }}">{{ site.domain }}</a></h1>
+		<h1 id="site-name"><a id="subdomain" href="{{ site.baseurl }}">{{ site.subdomain }}</a>.<a href="{{ site.parenturl }}">{{ site.domain }}</a></h1>
 		<nav>
 			{% for link in site.links %}
 			<a href="{{ link.url }}">{{ link.name }}</a>

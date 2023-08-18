@@ -7,7 +7,7 @@ permalink: /connectors/
 <h1>All Connectors</h1>
 
 {% for connector in site.data.connectors %}
-<h2><a href="{{ connector.name | datapage_url: 'c' }}">{{ connector.name }}</a></h2>
+<h2><a href="{{ site.baseurl }}{{ connector.name | datapage_url: 'c' }}">{{ connector.name }}</a></h2>
 <img src="/img/{{ connector.image }}" />
 <p><ul>
 	<li><b>Number of pins:</b> {{ connector.pins }}</li>
