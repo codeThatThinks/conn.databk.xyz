@@ -1,0 +1,49 @@
+<form action="/search/" method="get">
+	<table>
+		<tr>
+			<td><label for="pins">Number of Pins:</label></td>
+			<td>
+				<select name="pins">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="shape">Housing Shape:</label></td>
+			<td>
+				<select name="shape">
+					<option value="rect">Rectangle</option>
+					<option value="round-rect">Rounded Rectangle</option>
+					<option value="cir">Circle</option>
+					<option value="oval">Oval</option>
+					<option value="tri">Triangle</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="color">Housing Color:</label></td>
+			<td>
+				<select name="color">
+					<option value="black">Black</option>
+					<option value="grey">Grey</option>
+					<option value="white">White</option>
+					<option value="red">Red</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="keywords">Keywords:</label></td>
+			<td><input type="text" name="keywords" size="25" placeholder="honda crankshaft position" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button type="submit">Search</button></td>
+		</tr>
+	</table>
+</form>

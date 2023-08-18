@@ -1,0 +1,17 @@
+---
+title: All Connectors
+permalink: /connectors/
+---
+
+<h1>All Connectors</h1>
+
+{% for connector in site.data.connectors %}
+<h2>{{ connector.name }}</h2>
+<img src="img/{{ connector.image }}" />
+<ul>
+	<li>Pins: {{ connector.pins }}</li>
+	<li>Housing Shape: {{ connector.shape }}</li>
+	<li>Housing Color: {{ connector.color }}</li>
+</ul>
+
+{% endfor %}

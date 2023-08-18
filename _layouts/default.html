@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			max-width: 50em;
+			margin: 0 auto;
+			background-color: #ccc;
+			font: 14pt sans-serif;
+			color: #555;
+		}
+
+		header {
+			overflow: hidden;
+			background-color: #bbb;
+			border-radius: 0.25em;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			padding: 1em;
+		}
+
+		header h1#site-name {
+			float: left;
+			font-size: 14pt;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		header nav {
+			float: right;
+		}
+
+		header nav a {
+			margin-right: 1em;
+		}
+
+		header nav a:last-child {
+			margin-right: 0;
+		}
+
+		header a:link, header a:visited {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		header a:hover {
+			text-decoration: underline;
+			color: #222;
+		}
+
+		main {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		a, a:link {
+			color: #08c;
+		}
+
+		a:hover {
+			color: #046;
+		}
+
+		a:visited {
+			color: #70c;
+		}
+
+		img {
+			border-radius: 0.25em;
+			max-width: 100%;
+		}
+
+		form table {
+			border: 0;
+		}
+
+		form table td {
+			padding: 0.25em;
+			vertical-align: top;
+		}
+
+		input, select, button {
+			font-size: 14pt;
+		}
+
+		button {
+			padding: 0.25em 0.5em;
+		}
+
+		.cta {
+			text-align: center;
+			font-size: 18pt;
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+		<nav>
+			{% for link in site.links %}
+			<a href="{{ link.url }}">{{ link.name }}</a>
+			{% endfor %}
+		</nav>
+	</header>
+	<main>
+		{{ content }}
+	</main>
+</body>
+</html>
