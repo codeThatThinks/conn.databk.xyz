@@ -11,8 +11,8 @@ permalink: /connectors/
 <img src="/img/{{ connector.image }}" />
 <p><ul>
 	<li><b>Number of pins:</b> {{ connector.pins }}</li>
-	<li><b>Housing shape:</b> {{ connector.shape }}</li>
-	<li><b>Housing color:</b> {{ connector.color }}</li>
+	<li><b>Housing shape:</b> {{ site.connector_shapes[connector.shape] }}</li>
+	<li><b>Housing color:</b> {{ site.connector_colors[connector.color] }}</li>
 </ul></p>
 
 {% endfor %}

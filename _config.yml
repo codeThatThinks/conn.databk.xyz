@@ -13,14 +13,13 @@ links:
 - {name: Browse, url: /connectors/}
 - {name: Contribute, url: "https://github.com/codeThatThinks/conn.databk.xyz"}
 
-page-gen-dirs: true
+page_gen-dirs: true
 
-page-gen:
+page_gen:
   - data: connectors
     template: connector
-    dir: c
     name: name
-    title: name
+    dir: c
 
 permalink: /:slug/
 

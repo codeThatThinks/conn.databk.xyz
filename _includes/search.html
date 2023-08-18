@@ -16,11 +16,9 @@
 			<td><label for="shape">Housing Shape:</label></td>
 			<td>
 				<select name="shape">
-					<option value="rect">Rectangle</option>
-					<option value="round-rect">Rounded Rectangle</option>
-					<option value="cir">Circle</option>
-					<option value="oval">Oval</option>
-					<option value="tri">Triangle</option>
+					{% for shape in site.connector_shapes %}
+					<option value="{{ shape[0] }}">{{ shape[1] }}</option>
+					{% endfor %}
 				</select>
 			</td>
 		</tr>
@@ -28,12 +26,9 @@
 			<td><label for="color">Housing Color:</label></td>
 			<td>
 				<select name="color">
-					<option value="black">Black</option>
-					<option value="grey">Grey</option>
-					<option value="white">White</option>
-					<option value="red">Red</option>
-					<option value="green">Green</option>
-					<option value="blue">Blue</option>
+					{% for color in site.connector_colors %}
+					<option value="{{ color[0] }}">{{ color[1] }}</option>
+					{% endfor %}
 				</select>
 			</td>
 		</tr>
