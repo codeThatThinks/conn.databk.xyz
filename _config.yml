@@ -1,18 +1,26 @@
 name: conn.databk.xyz
 description: Automotive Connector Databook
 
+baseurl:
+parenturl: https://databk.xyz
+
+subdomain: conn
+domain: databk.xyz
+
 links:
 - {name: Home, url: /}
 - {name: Search, url: /search/}
 - {name: Browse, url: /connectors/}
 - {name: Contribute, url: "https://github.com/codeThatThinks/conn.databk.xyz"}
 
+page-gen-dirs: true
+
 page-gen:
-  data: connectors
-  template: connector
-  dir: c
-  name: name
-  title: name
+  - data: connectors
+    template: connector
+    dir: c
+    name: name
+    title: name
 
 permalink: /:slug/
 
