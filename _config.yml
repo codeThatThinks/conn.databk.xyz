@@ -13,15 +13,13 @@ links:
 - {name: Browse, url: /connectors/}
 - {name: Contribute, url: "https://github.com/codeThatThinks/conn.databk.xyz"}
 
-page_gen-dirs: true
+page_gen-dirs: false
 
 page_gen:
-  - data: connectors
-    template: connector
-    name: name
-    dir: c
-
-permalink: /:slug/
+  - data: 'connectors'
+    template: 'connector'
+    name: 'name'
+    dir: 'connector'
 
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks

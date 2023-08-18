@@ -16,7 +16,7 @@
 			<td><label for="shape">Housing Shape:</label></td>
 			<td>
 				<select name="shape">
-					{% for shape in site.connector_shapes %}
+					{% for shape in site.data.connector_shapes %}
 					<option value="{{ shape[0] }}">{{ shape[1] }}</option>
 					{% endfor %}
 				</select>
@@ -26,7 +26,7 @@
 			<td><label for="color">Housing Color:</label></td>
 			<td>
 				<select name="color">
-					{% for color in site.connector_colors %}
+					{% for color in site.data.connector_colors %}
 					<option value="{{ color[0] }}">{{ color[1] }}</option>
 					{% endfor %}
 				</select>

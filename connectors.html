@@ -7,12 +7,12 @@ permalink: /connectors/
 <h1>All Connectors</h1>
 
 {% for connector in site.data.connectors %}
-<h2><a href="{{ connector.name | datapage_url: c }}">{{ connector.name }}</a></h2>
+<h2><a href="{{ connector.name | datapage_url: connector }}">{{ connector.name }}</a></h2>
 <img src="/img/{{ connector.image }}" />
 <p><ul>
 	<li><b>Number of pins:</b> {{ connector.pins }}</li>
-	<li><b>Housing shape:</b> {{ site.connector_shapes[connector.shape] }}</li>
-	<li><b>Housing color:</b> {{ site.connector_colors[connector.color] }}</li>
+	<li><b>Housing shape:</b> {{ site.data.connector_shapes[connector.shape] }}</li>
+	<li><b>Housing color:</b> {{ site.data.connector_colors[connector.color] }}</li>
 </ul></p>
 
 {% endfor %}
