@@ -1,0 +1,32 @@
+name: conn.databk.xyz
+description: Automotive Connector Databook
+
+links:
+- {name: Home, url: /}
+- {name: Search, url: /search/}
+- {name: Browse, url: /connectors/}
+- {name: Contribute, url: "https://github.com/codeThatThinks/conn.databk.xyz"}
+
+permalink: /:slug/
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Use the following plug-ins
+gems:
+  - jekyll-default-layout
+  #- jekyll-datapage-generator
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
