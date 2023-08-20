@@ -17,7 +17,7 @@
 		}
 
 		body {
-			max-width: 50em;
+			max-width: 70em;
 			margin: 0 auto;
 			background-color: #ccc;
 			font: 14pt sans-serif;
@@ -111,6 +111,28 @@
 			font-size: 18pt;
 			padding-top: 1em;
 			padding-bottom: 1em;
+		}
+
+		.grid {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		.grid-item {
+			width: 33.333%;
+			padding: 1em;
+		}
+
+		.grid-item a, .grid-item span {
+			display: block;
+		}
+
+		.grid-item a:link, .grid-item a:visited {
+			text-decoration: none;
+		}
+
+		.grid-item a:hover {
+			text-decoration: underline;
 		}
 	</style>
 </head>
