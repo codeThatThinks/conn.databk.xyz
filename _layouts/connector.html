@@ -3,9 +3,15 @@ layout: default
 ---
 
 <h1>{{ page.title }}</h1>
-<img src="/img/{{ page.image }}" />
-<p><ul>
-	<li><b>Number of pins:</b> {{ page.pins }}</li>
-	<li><b>Housing shape:</b> {{ site.data.connector_shapes[page.shape] }}</li>
-	<li><b>Housing color:</b> {{ site.data.connector_colors[page.color] }}</li>
-</ul></p>
+<div class="row">
+	<div class="two-col">
+		<img src="/img/{{ page.image }}" />
+	</div>
+	<div class="two-col">
+		<p><ul>
+			<li><b>Number of pins:</b> {{ page.pins }}</li>
+			<li><b>Housing shape:</b> {{ site.data.connector_shapes[page.shape] }}</li>
+			<li><b>Housing color:</b> {{ site.data.connector_colors[page.color] }}</li>
+		</ul></p>
+	</div>
+</div>
