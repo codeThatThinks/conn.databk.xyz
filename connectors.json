@@ -1,0 +1,12 @@
+[
+{% for connector in site.connectors %}
+	{
+		"name": "{{ connector.name }}",
+		"pins": "{{ connector.pins }}",
+		"shape": "{{ connector.shape }}",
+		"color": "{{ connector.color }}",
+		"image": "{{ connector.image }}",
+		"url": "{{ site.baseurl }}{{ connector.name | datapage_url: 'c' }}"
+	},
+{% endfor %}
+]
