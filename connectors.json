@@ -1,3 +1,6 @@
+---
+permalink: /connectors.json
+---
 [
 {% for connector in site.connectors %}
 	{
