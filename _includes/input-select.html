@@ -1,0 +1,10 @@
+{% assign items = include.data | map: include.key | uniq | sort %}
+<fieldset>
+	<label for="{{ include.key }}">{{ include.label }}:</label>
+	<select name="{{ include.key }}">
+		<option value="">Any</option>
+		{% for item in items %}
+		<option>{{ item }}</option>
+		{% endfor %}
+	</select>
+</fieldset>

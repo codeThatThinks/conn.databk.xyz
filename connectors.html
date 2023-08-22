@@ -1,18 +1,64 @@
 ---
-title: All Connectors
+title: Connectors
 layout: default
 permalink: /connectors/
 ---
 
-<h1>All Connectors</h1>
+<h1>Connectors</h1>
+
+<form class="horizontal" name="filters">
+	{% include input-select.html label="Pins" data=site.data.connectors key="pins" %}
+	{% include input-select.html label="Shape" data=site.data.connectors key="shape" %}
+	{% include input-select.html label="Color" data=site.data.connectors key="color" %}
+	<fieldset>
+		<label for="keywords">Keywords:</label>
+		<input type="text" name="keywords" size="30" placeholder="honda crankshaft position" />
+	</fieldset>
+</form>
 
 <div class="grid">
-{% for connector in site.data.connectors %}
-	<div class="grid-item">
+	{% for connector in site.data.connectors %}
+	<div class="grid-item" data-name="{{ connector.name }}" data-pins="{{ connector.pins }}" data-shape="{{ connector.shape }}" data-color="{{ connector.color }}">
 		<a href="{{ site.baseurl }}{{ connector.name | datapage_url: 'c' }}">
 			<img src="/img/{{ connector.image }}" />
 			<span>{{ connector.name }}</span>
 		</a>
 	</div>
-{% endfor %}
+	{% endfor %}
 </div>
+
+<script type="text/javascript">
+	function has_keywords(text, keywords) {
+		for(var i = 0; i < keywords.length; i++) {
+			if(text.toLowerCase().search(keywords[i]) == -1) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	function filter() {
+		const pins = document.querySelector("[name='pins']").value;
+		const shape = document.querySelector("[name='shape']").value;
+		const color = document.querySelector("[name='color']").value;
+		const keywords = document.querySelector("[name='keywords']").value.trim().split(" ");
+		const items = document.querySelectorAll(".grid-item");
+
+		for(var i = 0; i < items.length; i++) {
+			if((pins == "" || items[i].dataset.pins == pins)
+				&& (shape == "" || items[i].dataset.shape == shape)
+				&& (color == "" || items[i].dataset.color == color)
+				&& (keywords.length == 0 || has_keywords(items[i].dataset.name, keywords))) {
+				items[i].style.display = 'block';
+			} else {
+				items[i].style.display = 'none';
+			}
+		}
+	}
+
+	document.querySelector("[name='pins']").addEventListener("change", filter);
+	document.querySelector("[name='shape']").addEventListener("change", filter);
+	document.querySelector("[name='color']").addEventListener("change", filter);
+	document.querySelector("[name='keywords']").addEventListener("input", filter);
+</script>

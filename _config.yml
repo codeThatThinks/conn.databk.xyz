@@ -3,14 +3,14 @@ description: Automotive Connector Databook
 
 baseurl: /
 parenturl: https://databk.xyz
+contriburl: https://github.com/codeThatThinks/conn.databk.xyz
 
 subdomain: conn
 domain: databk.xyz
 
 links:
 - {name: Home, url: /}
-- {name: Search, url: /search/}
-- {name: Browse, url: /connectors/}
+- {name: Connectors, url: /connectors/}
 - {name: Contribute, url: "https://github.com/codeThatThinks/conn.databk.xyz"}
 
 page_gen-dirs: true

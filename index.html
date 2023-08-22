@@ -8,6 +8,16 @@ permalink: /
 	<p>An open database for cataloging and identifying automotive connectors.</p>
 </div>
 
-<h2>Search</h2>
-
-{% include search.html %}
+<div class="row">
+	<div class="two-col">
+		<h2><a href="/connectors/">Browse Connectors</a></h2>
+	</div>
+	<div class="two-col">
+		<h2>Stats</h2>
+		<ul>
+			<li><b>{{ site.data.connectors | size }}</b> Connectors</li>
+			<li><b>0</b> Terminals</li>
+			<li><b>0</b> Accessories</li>
+		</ul>
+	</div>
+</div>

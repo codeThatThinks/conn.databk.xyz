@@ -8,10 +8,11 @@ layout: default
 		<img src="/img/{{ page.image }}" />
 	</div>
 	<div class="two-col">
-		<p><ul>
-			<li><b>Number of pins:</b> {{ page.pins }}</li>
-			<li><b>Housing shape:</b> {{ site.data.connector_shapes[page.shape] }}</li>
-			<li><b>Housing color:</b> {{ site.data.connector_colors[page.color] }}</li>
-		</ul></p>
+		<h2>Parameters</h2>
+		<table>
+			<tr><td><b>Pins:</b></td><td>{{ page.pins }}</td></tr>
+			<tr><td><b>Housing Shape:</b></td><td>{{ page.shape }}</td></tr>
+			<tr><td><b>Housing Color:</b></td><td>{{ page.color }}</td></tr>
+		</table>
 	</div>
 </div>

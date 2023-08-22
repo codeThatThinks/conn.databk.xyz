@@ -14,6 +14,8 @@
 			height: 100%;
 			padding: 0;
 			margin: 0;
+			padding-left: 1em;
+			padding-right: 1em;
 		}
 
 		body {
@@ -66,6 +68,16 @@
 			color: #222;
 		}
 
+		footer {
+			color: #888;
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+
+		footer a:link, footer a:visited {
+			color: inherit;
+		}
+
 		a, a:link {
 			color: #08c;
 		}
@@ -87,13 +99,31 @@
 			background-color: #ddd;
 			padding: 1em;
 			border-radius: 0.25em;
+			margin-top: 1em;
+			margin-bottom: 1em;
 		}
 
-		form table {
+		fieldset {
+			border: 0;
+			padding: 0;
+		}
+
+		form.horizontal {
+			display: flex;
+			flex-direction: row;
+			gap: 1em;
+		}
+
+		form.horizontal label {
+			display: block;
+			margin-bottom: 0.5em;
+		}
+
+		table {
 			border: 0;
 		}
 
-		form table td {
+		table td {
 			padding: 0.25em;
 			vertical-align: top;
 		}
@@ -140,12 +170,20 @@
 			flex-direction: row;
 		}
 
+		.highlight {
+			background-color: #ddd;
+			padding: 1em;
+			border-radius: 0.25em;
+		}
+
 		.two-col {
 			width: 50%;
+			padding: 1em;
 		}
 
 		.three-col {
 			width: 33.333%;
+			padding: 1em;
 		}
 	</style>
 </head>
@@ -161,5 +199,8 @@
 	<main>
 		{{ content }}
 	</main>
+	<footer>
+		{{ site.name }} - <a href="{{ site.contriburl }}">Contribute on GitHub</a>
+	</footer>
 </body>
 </html>
