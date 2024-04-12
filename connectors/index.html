@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Connectors – conn.databk.xyz</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		body {
+			max-width: 70em;
+			margin: 0 auto;
+			background-color: #ccc;
+			font: 14pt sans-serif;
+			color: #555;
+		}
+
+		header {
+			overflow: hidden;
+			background-color: #bbb;
+			border-radius: 0.25em;
+			margin-top: 2em;
+			margin-bottom: 2em;
+			padding: 1em;
+		}
+
+		header h1#site-name {
+			float: left;
+			font-size: 14pt;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		header nav {
+			float: right;
+		}
+
+		header nav a {
+			margin-right: 1em;
+		}
+
+		header nav a:last-child {
+			margin-right: 0;
+		}
+
+		header a:link, header a:visited {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		header a:hover {
+			text-decoration: underline;
+			color: #222;
+		}
+
+		header a#subdomain:link, header a#subdomain:visited {
+			color: #222;
+		}
+
+		footer {
+			color: #888;
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+
+		footer a:link, footer a:visited {
+			color: inherit;
+		}
+
+		a, a:link {
+			color: #08c;
+		}
+
+		a:hover {
+			color: #046;
+		}
+
+		a:visited {
+			color: #70c;
+		}
+
+		img {
+			border-radius: 0.25em;
+			max-width: 100%;
+		}
+
+		form {
+			background-color: #ddd;
+			padding: 1em;
+			border-radius: 0.25em;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+
+		fieldset {
+			border: 0;
+			padding: 0;
+		}
+
+		form.horizontal {
+			display: flex;
+			flex-direction: row;
+			gap: 1em;
+		}
+
+		form.horizontal label {
+			display: block;
+			margin-bottom: 0.5em;
+		}
+
+		table {
+			border: 0;
+		}
+
+		table td {
+			padding: 0.25em;
+			vertical-align: top;
+		}
+
+		input, select, button {
+			font-size: 14pt;
+		}
+
+		button {
+			padding: 0.25em 0.5em;
+		}
+
+		.cta {
+			text-align: center;
+			font-size: 18pt;
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+
+		.grid {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		.grid-item {
+			width: 33.333%;
+			padding: 1em;
+		}
+
+		.grid-item a, .grid-item span {
+			display: block;
+		}
+
+		.grid-item a:link, .grid-item a:visited {
+			text-decoration: none;
+		}
+
+		.grid-item a:hover {
+			text-decoration: underline;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.highlight {
+			background-color: #ddd;
+			padding: 1em;
+			border-radius: 0.25em;
+		}
+
+		.two-col {
+			width: 50%;
+			padding: 1em;
+		}
+
+		.three-col {
+			width: 33.333%;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id="site-name"><a id="subdomain" href="/">conn</a>.<a href="https://databk.xyz">databk.xyz</a></h1>
+		<nav>
+			
+			<a href="/">Home</a>
+			
+			<a href="/connectors/">Connectors</a>
+			
+			<a href="https://github.com/codeThatThinks/conn.databk.xyz">Contribute</a>
+			
+		</nav>
+	</header>
+	<main>
+		<h1>Connectors</h1>
+
+<form class="horizontal" name="filters">
+	
+<fieldset>
+	<label for="pins">Pins:</label>
+	<select name="pins">
+		<option value="">Any</option>
+		
+		<option>2</option>
+		
+		<option>3</option>
+		
+		<option>4</option>
+		
+	</select>
+</fieldset>
+
+	
+<fieldset>
+	<label for="shape">Shape:</label>
+	<select name="shape">
+		<option value="">Any</option>
+		
+		<option>Circle</option>
+		
+		<option>Rounded Rectangle</option>
+		
+	</select>
+</fieldset>
+
+	
+<fieldset>
+	<label for="color">Color:</label>
+	<select name="color">
+		<option value="">Any</option>
+		
+		<option>Black</option>
+		
+		<option>Green</option>
+		
+		<option>Grey</option>
+		
+	</select>
+</fieldset>
+
+	<fieldset>
+		<label for="keywords">Keywords:</label>
+		<input type="text" name="keywords" size="30" placeholder="honda crankshaft position" />
+	</fieldset>
+</form>
+
+<div class="grid">
+	
+	<div class="grid-item" data-name="Honda 2 pin Black" data-pins="2" data-shape="Rounded Rectangle" data-color="Black">
+		<a href="/c/honda-2-pin-black/">
+			<img src="/img/connectors-honda-2-position-connector-kit-1_2000x.webp" />
+			<span>Honda 2 pin Black</span>
+		</a>
+	</div>
+	
+	<div class="grid-item" data-name="Honda 2 pin Grey" data-pins="2" data-shape="Rounded Rectangle" data-color="Grey">
+		<a href="/c/honda-2-pin-grey/">
+			<img src="/img/connectors-honda-2-position-connector-kit-gray-1_2000x.webp" />
+			<span>Honda 2 pin Grey</span>
+		</a>
+	</div>
+	
+	<div class="grid-item" data-name="Honda 3 pin" data-pins="3" data-shape="Circle" data-color="Grey">
+		<a href="/c/honda-3-pin/">
+			<img src="/img/connectors-honda-3-position-round-connector-kit-1_2000x.webp" />
+			<span>Honda 3 pin</span>
+		</a>
+	</div>
+	
+	<div class="grid-item" data-name="Honda K-Series Alternator" data-pins="4" data-shape="Rounded Rectangle" data-color="Green">
+		<a href="/c/honda-k-series-alternator/">
+			<img src="/img/connectors-honda-alternator-connector-kit-1_2000x.webp" />
+			<span>Honda K-Series Alternator</span>
+		</a>
+	</div>
+	
+	<div class="grid-item" data-name="Honda K-Series Idle Valve" data-pins="3" data-shape="Rounded Rectangle" data-color="Grey">
+		<a href="/c/honda-k-series-idle-valve/">
+			<img src="/img/connectors-honda-k-series-idle-valve-connector-kit-1_2000x.webp" />
+			<span>Honda K-Series Idle Valve</span>
+		</a>
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+	function has_keywords(text, keywords) {
+		for(var i = 0; i < keywords.length; i++) {
+			if(text.toLowerCase().search(keywords[i]) == -1) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	function filter() {
+		const pins = document.querySelector("[name='pins']").value;
+		const shape = document.querySelector("[name='shape']").value;
+		const color = document.querySelector("[name='color']").value;
+		const keywords = document.querySelector("[name='keywords']").value.trim().split(" ");
+		const items = document.querySelectorAll(".grid-item");
+
+		for(var i = 0; i < items.length; i++) {
+			if((pins == "" || items[i].dataset.pins == pins)
+				&& (shape == "" || items[i].dataset.shape == shape)
+				&& (color == "" || items[i].dataset.color == color)
+				&& (keywords.length == 0 || has_keywords(items[i].dataset.name, keywords))) {
+				items[i].style.display = 'block';
+			} else {
+				items[i].style.display = 'none';
+			}
+		}
+	}
+
+	document.querySelector("[name='pins']").addEventListener("change", filter);
+	document.querySelector("[name='shape']").addEventListener("change", filter);
+	document.querySelector("[name='color']").addEventListener("change", filter);
+	document.querySelector("[name='keywords']").addEventListener("input", filter);
+</script>
+
+	</main>
+	<footer>
+		conn.databk.xyz - <a href="https://github.com/codeThatThinks/conn.databk.xyz">Contribute on GitHub</a>
+	</footer>
+</body>
+</html>
